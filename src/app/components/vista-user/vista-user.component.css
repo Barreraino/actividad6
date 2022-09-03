@@ -1,0 +1,41 @@
+.rounded-circles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    border-radius: 50%;
+  }
+
+  .btn_i {
+    font-size: 0.8rem;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: none;
+  } 
+  .btn_i:hover { border-radius: 10px;
+    background-color: lightblue;
+    transition: 1s;
+    background-color:skyblue
+    
+  }
+  .spc{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+
+  }
+  .row_botones {
+    display: flex;
+  align-items: center;
+  justify-content: space-around;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: none;
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }

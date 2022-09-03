@@ -1,0 +1,43 @@
+<app-nav-bar></app-nav-bar>
+<div class="container overflow-hidden text-center pt-5">
+    <div class="row gx-5">
+      <div class="col border-end  border-secondary">
+       <div class="rounded-circles  ">
+      
+        <img class=" rounded-circles " width="300px" height="300px" src="{{myUser?. image}}" alt="" />
+       </div>
+     
+
+      </div>
+      <div class="col">
+        <div class="p-3 ">
+
+            <h2 class="text-center text-secondary ">{{myUser?.first_name}}</h2>
+             <h2 class="text-center text-secondary ">{{myUser?.last_name}}</h2>
+
+             <div class="text-center text-secondary pt-5">
+             <strong> usuario : </strong> {{myUser?.username}}<br>
+             <strong>Email:     </strong> {{myUser?.email}}<br>
+             </div>
+
+             <div class="container pt-4 " id="botones">
+                <div class="row_botones">
+                    <div class="spc">
+                        <button type="button" class="btn_i"  (click)="deleteUser(myUser?.id)">
+                          <i class="fa-solid fa-trash-alt"></i>
+                          <p class="m-0" >Eliminar</p>
+                        </button>
+                      </div>
+                    <button type="button" class="btn_i"  [routerLink]="['/updateuser', myUser?.id]">
+                      <i class="fa-solid fa-arrows-spin"></i>
+                      <p class="m-0" >Actualizar</p>
+                    </button>
+                    <button type="button" class="btn_i" [routerLink]="['/home']">
+                        <i class="fa-solid fa-chevron-circle-right"></i>
+                        <p class="m-0">Volver al listado</p>
+                      </button>
+                  </div>
+        </div>
+      </div>
+    </div>
+  </div>

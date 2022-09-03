@@ -1,0 +1,74 @@
+
+ <main>
+      <div class="album py-5 bg-light">
+        <div class="container ">
+    
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+      
+            <div class="col" *ngFor="let user of miusers">
+              <div class="   card shadow-sm">
+        
+                <div class="card-body">
+                  <div class="rounded-circles">
+                  <img class=" rounded-circles " width="200" height="200" src="{{user?.image}}" alt="" />
+                </div>
+                  <div class="card-name ">
+                    <h5 class="card-name">{{user?.first_name + ' ' + user?.last_name}}</h5>
+                    </div>
+
+                    <div class="container" id="botones">
+                      <div class="row_botones">
+                        <div class="spc">
+                          <button type="button" class="btn_i" [routerLink]="['/USERS', user?.id]">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <p class="m-0">Ver detalles </p>
+                          </button>
+                        </div>
+                        <div class="spc">
+                          <button type="button" class="btn_i" [routerLink]="['/updateuser', user?.id]">
+                            <i class="fa-solid fa-arrows-spin"></i>
+                            <p     class="m-0">Actualizar</p>
+                          </button>
+                        </div>
+                        <div class="spc">
+                          <button type="button" class="btn_i" (click)="deleteUser(user?.id)">
+                            <i class="fa-solid fa-trash-alt"></i>
+                            <p class="m-0" >Eliminar</p>
+                          </button>
+                        </div>
+
+
+                        
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+          </div> 
+        </div> 
+      </div>
+      <nav aria-label="Page navigation example">
+ 
+        <ul class="pagination d-flex justify-content-center p-0">
+            <li class="page-item"><button class="page-link" href="#" (click)="pagina(currentPage-1) " [disabled]="currentPage==1" >Anterior</button></li>
+            <li class="page-item"><button class="page-link" href="#" (click)="pagina(currentPage+1)"[disabled]="maxPages == currentPage">Siguiente</button></li>
+          </ul>
+        </nav>
+    </main>
+    
+    <footer class="text-muted py-5">
+      <div class="container">
+        <p class="float-end mb-1">
+       
+        </p>
+       
+          
+      </div>
+    </footer>
+    
+    
+        <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    
+          
+     
